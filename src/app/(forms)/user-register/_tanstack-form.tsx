@@ -1,4 +1,3 @@
-/* eslint-disable react/no-children-prop */
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -76,9 +75,8 @@ export default function TansTackForm() {
           }}
         >
           <FieldGroup>
-            <form.Field
-              name="name"
-              children={(field) => {
+            <form.Field name="name">
+              {(field) => {
                 const isInvalid =
                   field.state.meta.isTouched && !field.state.meta.isValid;
 
@@ -103,11 +101,10 @@ export default function TansTackForm() {
                   </Field>
                 );
               }}
-            />
+            </form.Field>
 
-            <form.Field
-              name="email"
-              children={(field) => {
+            <form.Field name="email">
+              {(field) => {
                 const isInvalid =
                   field.state.meta.isTouched && !field.state.meta.isValid;
 
@@ -132,11 +129,10 @@ export default function TansTackForm() {
                   </Field>
                 );
               }}
-            />
+            </form.Field>
 
-            <form.Field
-              name="password"
-              children={(field) => {
+            <form.Field name="password">
+              {(field) => {
                 const isInvalid =
                   field.state.meta.isTouched && !field.state.meta.isValid;
 
@@ -161,11 +157,10 @@ export default function TansTackForm() {
                   </Field>
                 );
               }}
-            />
+            </form.Field>
 
-            <form.Field
-              name="confirmPassword"
-              children={(field) => {
+            <form.Field name="confirmPassword">
+              {(field) => {
                 const isInvalid =
                   field.state.meta.isTouched && !field.state.meta.isValid;
 
@@ -192,11 +187,10 @@ export default function TansTackForm() {
                   </Field>
                 );
               }}
-            />
+            </form.Field>
 
-            <form.Field
-              name="type"
-              children={(field) => {
+            <form.Field name="type">
+              {(field) => {
                 const isInvalid =
                   field.state.meta.isTouched && !field.state.meta.isValid;
 
@@ -225,7 +219,7 @@ export default function TansTackForm() {
                   </Field>
                 );
               }}
-            />
+            </form.Field>
 
             <form.Subscribe selector={(state) => state.values.type}>
               {(type) =>
@@ -261,9 +255,8 @@ export default function TansTackForm() {
               }
             </form.Subscribe>
 
-            <form.Field
-              name="terms"
-              children={(field) => {
+            <form.Field name="terms">
+              {(field) => {
                 const isInvalid =
                   field.state.meta.isTouched && !field.state.meta.isValid;
 
@@ -287,7 +280,7 @@ export default function TansTackForm() {
                   </Field>
                 );
               }}
-            />
+            </form.Field>
           </FieldGroup>
         </form>
       </CardContent>
